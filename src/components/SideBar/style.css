@@ -1,4 +1,24 @@
-.sidebar {
+.sidebarContainer {
   width: 27%;
-  background-color: #fff;
+}
+
+.cardHeader {
+  text-transform: uppercase;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px 0;
+  box-sizing: border-box;
+  letter-spacing: 2px;
+  color: #565673;
+}
+
+.profileImageContainer {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.profileImageContainer img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 20px 0;
 }
