@@ -3,10 +3,10 @@ import "./style.css";
 import BlogPost from "../../components/BlogPost";
 import SideBar from "../../components/SideBar";
 
-function Post() {
+function Post(props) {
   return (
     <section className="container">
-      <BlogPost></BlogPost>
+      <BlogPost {...props}></BlogPost>
       <SideBar></SideBar>
     </section>
   );
