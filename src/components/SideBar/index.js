@@ -10,10 +10,15 @@ export default function SideBar(props) {
   useEffect(() => {
     const posts = blogPost.data;
     setPosts(posts);
-  }, posts);
+  }, [posts]);
 
   return (
-    <div className="sidebarContainer">
+    <div
+      className="sidebarContainer"
+      style={{
+        width: props.width
+      }}
+    >
       <Card
         style={{
           marginBottom: "20px",
@@ -63,7 +68,7 @@ export default function SideBar(props) {
         <div className="recentPosts">
           {posts.map(post => {
             return (
-              <NavLink to={`/post/${post.id}`}>
+              <NavLink key={post.id} to={`/post/${post.id}`}>
                 <div className="recentPost">
                   <h3>{post.blogTitle}</h3>
                   <span>{post.postedOn}</span>
